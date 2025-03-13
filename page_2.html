@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="images/UMSI_signature_vertical_informal_solidblue.jpg">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css"> 
     <title>Page 2</title>
 </head>
 <body>
-
+    <div class="skip"><a href = "#main">Skip to Main Content</a></div>
     <header>
-            <a href = "#main">Skip to Main Content</a>
+        <span class="menu" style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <div class="head">
             <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
-        <nav>
-            <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "page_1.html">Student Success Portal</a></li>
-                <li><a href = "page_2.html">Counseling and Psychological Services (CAPS)</a></li>
-                <li><a href = "page_3.html">Tutoring</a></li>
-            </ul>
-        </nav>
-        <h1>Counseling and Psychogical Services at U of M</h1>
-
+        <div id="sidenav" class="nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href = "index.html" class="active">Home</a>
+            <a href = "page_1.html">Student Success Portal</a>
+            <a href = "page_2.html">CAPS</a>
+            <a href = "page_3.html">Tutoring</a><
+        </div>
+    <h1>Counseling and Psychological Services</h1>
+    </div>
     </header>
     <main id="main">
         <div>
@@ -51,7 +54,15 @@
     <footer>
         <p>CAPS website | <a href="https://caps.umich.edu/">CAPS </a></p>
     </footer>
-    
+    <script>
+        function openNav() {
+            document.getElementById("sidenav").style.width = "100%";
+        }
+        
+        function closeNav() {
+            document.getElementById("sidenav").style.width = "0";
+        } 
+    </script>
 </body>
 
 </html>

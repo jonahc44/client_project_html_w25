@@ -3,36 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="images/UMSI_signature_vertical_informal_solidblue.jpg">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css"> 
     <title>Student Success Portal</title>
 </head>
 <body>
-
-    <header>
-  <a href = "#main">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
-        <nav>
-            <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "page_1.html">Student Success Portal</a></li>
-                <li><a href = "page_2.html">Counseling and Psychological Services (CAPS)</a></li>
-                <li><a href = "page_3.html">Tutoring</a></li>
-            </ul>
-        </nav>
+  <div class="skip"><a href = "#main">Skip to Main Content</a></div>
+  <header>
+        <span class="menu" style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <div class="head">
+            <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        <div id="sidenav" class="nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href = "index.html" class="active">Home</a>
+            <a href = "page_1.html">Student Success Portal</a>
+            <a href = "page_2.html">CAPS</a>
+            <a href = "page_3.html">Tutoring</a><
+        </div>
         <h1>Student Success Portal</h1>
-
+        </div>
     </header>
-    <main id="main">
-        <section>
+    <main class="container" id="main">
+        <div class="section1">
             <h2>Welcome to the UMSI Success Navigator</h2>
             <p> Your Comprehensive Guide to Resources for Academic Success</p>
             <p>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
-            <ol>
+            <ul>
                 <li>Academic Resources</li>
                 <li>Mental Health</li>
                 <li>Community Resources</li>
-            </ol>
-        </section>
-        <section>
+            </ul>
+        </div>
+        <div class="section2">
             <h2><a href = "page_2.html">Mental Health</a>:</h2>
             <p>Maintaining your mental well-being is just as important as your physical health. Here are some resources to support your mental health:</p>
             <article>
@@ -45,16 +48,14 @@
             </article>
             <article>
                 <h3>Mindfulness Resources:</h3>
-
                 <p> Participate in mindfulness and meditation sessions to cultivate a calm and focused mind.</p>
             </article>
             <article>
                 <h3>Support Groups:</h3>
-
                 <p> Join peer support groups for shared experiences and collective coping strategies.</p>
             </article>
-        </section>
-        <section>
+        </div>
+        <div class="section3">
             <h2><a href = "page_3.html">Academic Support</a>:</h2>
             <p>At UMSI, we like to challenge our students to push their limits. We understand that in order to do so successfully, outside support is often needed. Here are some options available for some extra academic support:</p>
             <article>
@@ -69,10 +70,19 @@
                 <h3>Services for Students with Disabilities:</h3>
                 <p>If there are any disabilities that are making your academics more challenging and less accessible, SSD has many options to support you.</p>
             </article>
-        </section>
+        </div>
     </main>
     <footer>
         <p>UMSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-        </footer>
+    </footer>
+    <script>
+        function openNav() {
+            document.getElementById("sidenav").style.width = "100%";
+        }
+        
+        function closeNav() {
+            document.getElementById("sidenav").style.width = "0";
+        } 
+    </script>
 </body>
 </html>

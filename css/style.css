@@ -1,0 +1,114 @@
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+.skip {
+     position: absolute;
+     top: -40px;
+     left: 0;
+   }
+
+.skip:focus {
+     top: 20px;
+   }
+
+:focus {
+     border: 2px solid #000;
+   }
+  
+.menu {
+  padding-left: 10px;
+  color: #00274C;
+}
+
+.nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #00274C;
+  overflow: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.nav a {
+  display: grid;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 40px;
+  grid-template-rows: repeat(4, 25%);
+  color: white;
+  transition: 0.3s;
+}
+
+.nav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.nav a:hover {
+  color: #FFCB05;
+}
+
+.head {
+    display: grid;
+    row-gap: 30px;
+  }
+
+  .head >:first-child {
+    place-self: center;
+    border-radius: 20px;
+    border: 50px black;
+  }
+
+  h1 {
+    color: white;
+    background-color: #00274C !important;
+    font-size: 40px !important;
+  }
+
+  h2 {
+    color: #00274C;
+    padding: 5px !important;
+    padding-top: 10px !important;
+    font-size: 30px !important;
+  }
+
+  p {
+    color: #00274C;
+    padding: 10px !important;
+    font-size: 20px !important;
+  }
+
+  ul {
+    color: #00274C;
+    padding: 30px !important;
+    font-size: 25px !important;
+  }
+
+  .section1 {
+    display: grid;
+    row-gap: 10px;
+  }
+
+  .section1
+
+.container {
+     display: grid;
+     grid-template-columns: 1fr;
+     row-gap: 30px;
+     color: #00274C;
+     padding: 5px;
+     padding-top: 20px;
+   }
+
+/* .container>:first-child {
+  padding-top: 20px;
+} */

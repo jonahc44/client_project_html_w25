@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="images/UMSI_signature_vertical_informal_solidblue.jpg">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css"> 
     <title>Page 1</title>
 </head>
 <body>
-
+    <div class="skip"><a href = "#main">Skip to Main Content</a></div>
     <header>
-            <a href = "#main">Skip to Main Content</a>
+        <span class="menu" style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <div class="head">
             <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
-        <nav>
-            <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "page_1.html">Student Success Portal</a></li>
-                <li><a href = "page_2.html">Counseling and Psychological Services (CAPS)</a></li>
-                <li><a href = "page_3.html">Tutoring</a></li>
-            </ul>
-        </nav>
-        <h1>Academic Support at UMSI</h1>
-
+        <div id="sidenav" class="nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href = "index.html" class="active">Home</a>
+            <a href = "page_1.html">Student Success Portal</a>
+            <a href = "page_2.html">CAPS</a>
+            <a href = "page_3.html">Tutoring</a><
+        </div>
+    <h1>Academic Support at UMSI</h1>
+    </div>
     </header>
     <main id="main">
         <div>
@@ -37,13 +40,6 @@
                 <li>University of Michigan Library</li>
                 <li>Services for Students with Disabilities</li>
             </ul>
-            <article>
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-                <p></p>
-            </article>
             <h2>Health Resources</h2>
             <p>The University of Michigan wants to make sure you and your health are taken care of. Some of the resources that are provided are:</p>
             <ul>
@@ -56,13 +52,6 @@
                 <li>Wolverine Support Network</li>
                 <li>Wolverine Wellness</li>
             </ul>
-            <article>
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-                <p></p>
-            </article>
             <h2>Community Building</h2>
             <p>Just as important as academics is the connections you will make here at the UMSI. In order to foster a strong community, we offer these resources:</p>
             <ul>
@@ -77,7 +66,15 @@
         <p>Access to the UMSI Academic Advising website | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources"> UMSI Academic Advising </a></p>
         <p>Not sure where to start? Contact the UMSI advising staff at <a href="umsi.advising.msi@umich.edu">umsi.advising.msi@umich.edu</a> </p>
     </footer>
-    
+    <script>
+        function openNav() {
+            document.getElementById("sidenav").style.width = "100%";
+        }
+        
+        function closeNav() {
+            document.getElementById("sidenav").style.width = "0";
+        } 
+    </script>
 </body>
 
 </html>
