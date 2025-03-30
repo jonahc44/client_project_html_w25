@@ -8,18 +8,18 @@
     <link rel="stylesheet" type="text/css" href="css/html5reset.css"> 
     <title>Page 2</title>
 </head>
-<body>
-    <div class="skip"><a href = "#main">Skip to Main Content</a></div>
+<body onload="closeNav()">
+    <div id="skip" class="skip"><a href = "#main" onfocus="skipFocus()" onfocusout="skipUnfocus()">Skip to Main Content</a></div>
     <header>
-        <span class="menu" style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <span class="menu" tabindex="2" style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
         <div class="head">
             <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
         <div id="sidenav" class="nav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href = "index.html" class="active">Home</a>
-            <a href = "page_1.html">Student Success Portal</a>
-            <a href = "page_2.html">CAPS</a>
-            <a href = "page_3.html">Tutoring</a><
+            <a href = "success.html">Student Success Portal</a>
+            <a href = "CAPS.html">CAPS</a>
+            <a href = "tutor.html">Tutoring</a><
         </div>
     <h1>Counseling and Psychological Services</h1>
     </div>
@@ -54,14 +54,19 @@
     <footer>
         <p>CAPS website | <a href="https://caps.umich.edu/">CAPS </a></p>
     </footer>
+    <script src="js/skipFocus.js"></script>
+    <script src="js/nav.js"></script>
     <script>
-        function openNav() {
-            document.getElementById("sidenav").style.width = "100%";
-        }
-        
-        function closeNav() {
-            document.getElementById("sidenav").style.width = "0";
-        } 
+        document.addEventListener('DOMContentLoaded', function () {
+            const menu = document.querySelector('.menu');
+
+            menu.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    menu.click();
+                }
+            });
+        });
     </script>
 </body>
 

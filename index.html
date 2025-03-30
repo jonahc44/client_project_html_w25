@@ -8,18 +8,18 @@
     <link rel="stylesheet" type="text/css" href="css/html5reset.css"> 
     <title>Student Success Portal</title>
 </head>
-<body>
-  <div class="skip"><a href = "#main">Skip to Main Content</a></div>
+<body onload="closeNav()">
   <header>
-        <span class="menu" style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <div id="skip" class="skip"><a href = "#main" onfocus="skipFocus()" onfocusout="skipUnfocus()">Skip to Main Content</a></div>
+        <span class="menu" tabindex="2" style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
         <div class="head">
             <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
         <div id="sidenav" class="nav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href = "index.html" class="active">Home</a>
-            <a href = "page_1.html">Student Success Portal</a>
-            <a href = "page_2.html">CAPS</a>
-            <a href = "page_3.html">Tutoring</a><
+            <a href="javascript:void(0)" tabindex="-1" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href = "index.html" tabindex="-1" class="active">Home</a>
+            <a href = "success.html" tabindex="-1">Student Success Portal</a>
+            <a href = "CAPS.html" tabindex="-1">CAPS</a>
+            <a href = "tutor.html" tabindex="-1">Tutoring</a><
         </div>
         <h1>Student Success Portal</h1>
         </div>
@@ -36,7 +36,7 @@
             </ul>
         </div>
         <div class="section2">
-            <h2><a href = "page_2.html">Mental Health</a>:</h2>
+            <h2><a href = "CAPS.html">Mental Health</a>:</h2>
             <p>Maintaining your mental well-being is just as important as your physical health. Here are some resources to support your mental health:</p>
             <article>
                 <h3>Counseling and Psychological Services (CAPS):</h3>
@@ -56,7 +56,7 @@
             </article>
         </div>
         <div class="section3">
-            <h2><a href = "page_3.html">Academic Support</a>:</h2>
+            <h2><a href = "tutor.html">Academic Support</a>:</h2>
             <p>At UMSI, we like to challenge our students to push their limits. We understand that in order to do so successfully, outside support is often needed. Here are some options available for some extra academic support:</p>
             <article>
                 <h3>Tutoring:</h3>
@@ -75,14 +75,19 @@
     <footer>
         <p>UMSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
     </footer>
+    <script src="js/skipFocus.js"></script>
+    <script src="js/nav.js"></script>
     <script>
-        function openNav() {
-            document.getElementById("sidenav").style.width = "100%";
-        }
-        
-        function closeNav() {
-            document.getElementById("sidenav").style.width = "0";
-        } 
+        document.addEventListener('DOMContentLoaded', function () {
+            const menu = document.querySelector('.menu');
+
+            menu.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    menu.click();
+                }
+            });
+        });
     </script>
 </body>
 </html>

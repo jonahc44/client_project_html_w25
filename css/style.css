@@ -4,13 +4,19 @@ nav a:focus {
 }
 
 .skip {
+     display: inline;
      position: absolute;
      top: -40px;
      left: 0;
+     z-index: 100;
+     padding: 8px;
+     text-decoration: none;
    }
 
 .skip:focus {
-     top: 20px;
+     top: 60px;
+     outline: none;
+    border: none;
    }
 
 :focus {
@@ -109,6 +115,6 @@ nav a:focus {
      padding-top: 20px;
    }
 
-/* .container>:first-child {
-  padding-top: 20px;
-} */
+@media (min-width: 750px) {
+
+}
