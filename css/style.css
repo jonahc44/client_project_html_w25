@@ -87,6 +87,10 @@ nav a:focus {
     font-size: 30px !important;
   }
 
+  h3 {
+    padding: 5px !important;
+  }
+
   p {
     color: #00274C;
     padding: 10px !important;
@@ -169,6 +173,122 @@ nav a:focus {
 
     .head >:first-child {
       margin-top: 100px;
+    }
+
+    /* figure {
+      display: grid !important;
+      grid-template-columns: auto;
+      align-items: center;
+      justify-content: center;
+    } */
+
+    p {
+      font-size: 25px !important;
+    }
+
+    h2 {
+      font-size: 50px !important;
+      padding: 30px !important;
+      padding-left: 15px !important;
+    }
+
+    h3 {
+      font-size: 30px !important;
+      padding: 10px !important;
+      padding-top: 30px !important;
+    }
+
+    article {
+      display: grid !important;
+      grid-template-columns: 60% 40%;
+      /* grid-template-rows: min-content; */
+      padding-top: 50px !important;
+    }
+
+    article h3 {
+      grid-column: 1;
+      grid-row: 1;
+      justify-content: center;
+      align-items: center;
+    }
+
+    article p {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    article figure {
+      grid-row: span 2;
+      grid-column: 2;
+      justify-self: center !important;
+      align-self: center !important;
+    }
+
+    .tutor article {
+      display: grid !important;
+      grid-template-columns: 60% 40%;
+      grid-template-rows: min-content min-content auto;
+      padding-top: 50px !important;
+    }
+
+    .tutor article h3 {
+      grid-column: 1;
+      grid-row: 1;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tutor article p {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .tutor article ul {
+      grid-row: 3;
+    }
+
+    .tutor article figure {
+      grid-row: span 3;
+      grid-column: 2;
+      justify-self: center !important;
+      align-self: center !important;
+    }
+
+    .section2 article {
+      display: grid !important;
+      grid-template-columns: 30% auto;
+      align-items: center;
+      justify-content: center;
+      padding-top: 40px;
+    }
+
+    .section2 article h3 {
+      grid-column: 1;
+    }
+
+    .section2 article p {
+      grid-column: 2;
+      grid-row: 1;
+      padding-right: 50px !important;
+      padding-left: 50px !important;
+    }
+
+    .section3 article {
+      display: grid !important;
+      grid-template-columns: min-content auto;
+      align-items: center;
+      justify-content: start;
+      padding-top: 40px;
+    }
+
+    .section3 article h3 {
+      grid-column: 1;
+    }
+
+    .section3 article p {
+      grid-column: 2;
+      padding-right: 50px !important;
+      padding-left: 50px !important;
     }
 
 }
