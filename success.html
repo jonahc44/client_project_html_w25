@@ -8,18 +8,24 @@
     <link rel="stylesheet" type="text/css" href="css/html5reset.css"> 
     <title>Page 1</title>
 </head>
-<body onload="closeNav()">
-    <div id="skip" class="skip"><a href = "#main" onfocus="skipFocus()" onfocusout="skipUnfocus()">Skip to Main Content</a></div>
+<body onload="load()">
     <header>
-        <span class="menu" tabindex="2" style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <div id="skip" class="skip"><a href = "#main" onfocus="skipFocus()" onfocusout="skipUnfocus()">Skip to Main Content</a></div>
+        <span id="menu" class="menu" tabindex="2" style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
         <div class="head">
             <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
-        <div id="sidenav" class="nav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="sidenav" class="sidenav">
+            <a href="javascript:void(0)" tabindex="-1" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href = "index.html" tabindex="-1" class="active">Home</a>
+            <a href = "success.html" tabindex="-1">Student Success Portal</a>
+            <a href = "CAPS.html" tabindex="-1">CAPS</a>
+            <a href = "tutor.html" tabindex="-1">Tutoring</a><
+        </div>
+        <div id="topnav" class="topnav">
             <a href = "index.html" class="active">Home</a>
             <a href = "success.html">Student Success Portal</a>
             <a href = "CAPS.html">CAPS</a>
-            <a href = "tutor.html">Tutoring</a><
+            <a href = "tutor.html">Tutoring</a>
         </div>
     <h1>Academic Support at UMSI</h1>
     </div>
@@ -65,9 +71,11 @@
     <footer>
         <p>Access to the UMSI Academic Advising website | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources"> UMSI Academic Advising </a></p>
         <p>Not sure where to start? Contact the UMSI advising staff at <a href="umsi.advising.msi@umich.edu">umsi.advising.msi@umich.edu</a> </p>
+        <p>Copyright <span id ="year"></span>. All rights reserved.</p>
     </footer>
     <script src="js/skipFocus.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/load.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const menu = document.querySelector('.menu');
@@ -79,6 +87,9 @@
                 }
             });
         });
+    </script>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
 </body>
 

@@ -22,13 +22,13 @@ nav a:focus {
 :focus {
      border: 2px solid #000;
    }
-  
+
 .menu {
   padding-left: 10px;
   color: #00274C;
 }
 
-.nav {
+.sidenav {
   height: 100%;
   width: 0;
   position: fixed;
@@ -41,7 +41,7 @@ nav a:focus {
   transition: 0.5s;
 }
 
-.nav a {
+.sidenav a {
   display: grid;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -51,7 +51,7 @@ nav a:focus {
   transition: 0.3s;
 }
 
-.nav .closebtn {
+.sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -59,7 +59,7 @@ nav a:focus {
   margin-left: 50px;
 }
 
-.nav a:hover {
+.sidenav a:hover {
   color: #FFCB05;
 }
 
@@ -99,12 +99,26 @@ nav a:focus {
     font-size: 25px !important;
   }
 
+  footer p {
+    color: white;
+    background-color: #00274C;
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: #00274C;
+  }
+
+  footer a:visited, footer a:link {
+    text-decoration: none;
+    color: white;
+  }
+
   .section1 {
     display: grid;
     row-gap: 10px;
   }
-
-  .section1
 
 .container {
      display: grid;
@@ -115,6 +129,46 @@ nav a:focus {
      padding-top: 20px;
    }
 
-@media (min-width: 750px) {
+@media (min-width: 800px) {
+  .topnav {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: 52.5px;
+      height: 65px;
+      width: 100%;
+      position: fixed;
+      align-items: center;
+      top: 0;
+      background-color: #00274C;
+    }
+
+    .topnav a {
+      font-size: 35px;
+      color: white;
+      text-decoration: none;
+      align-self: center;
+      text-align: center;
+      width: 99%;
+      height: 100%;
+      border-width: 5px;
+      border-color: white;
+      border-style: solid;
+      border-bottom: none;
+      border-left: none;
+      padding-top: 20px;
+    }
+
+    .topnav >:last-child {
+      border-right: none;
+    }
+
+    .topnav a:hover, .topnav a:focus {
+      color: #FFCB05;
+      /* border-color: #FFCB05; */
+    }
+
+    .head >:first-child {
+      margin-top: 100px;
+    }
 
 }
